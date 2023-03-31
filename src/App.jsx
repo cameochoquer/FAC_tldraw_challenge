@@ -5,8 +5,6 @@ import Stickers from './stickers'
 const App = () =>{
   return (
     <div>
-      <h1>Welcome to my app</h1>
-      {/* <MyButton onClick={() => handleCopy('🍏')} stickerEmoji={'🍏'}/> */}
       <footer>
         <Stickers stickerEmoji={'🍏'} />
         <Stickers stickerEmoji={'🍋'} />
