@@ -3,6 +3,7 @@ import './App.css'
 import Stickers from './stickers'
 
 const App = () =>{
+  
 
   const handlePaste = (event) => {
      if (event.target.closest('button')|| !navigator.clipboard) {
@@ -23,13 +24,15 @@ const App = () =>{
     });
   };
 
-
    useEffect(() =>{
     document.body.addEventListener('click', handlePaste );
     return () => {
         document.body.removeEventListener('click', handlePaste)
     }
    });
+
+   
+
   return (
     <div>
       <footer>
@@ -39,6 +42,8 @@ const App = () =>{
       </footer>
     </div>
   );
+
+ 
 }
 
 
