@@ -1,8 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react'
-import './App.css'
 import Stickers from './stickers'
 import CursorShadow from './CursorShadow/CursorShadow'
 import './index.css'
+import './App.css'
+
+// import Unicorn from './UnicornSticker/UnicornSticker'
 
 const App = () =>{
     const [clipboardText, setClipboardText] = useState('');
@@ -11,9 +13,8 @@ const App = () =>{
     setClipboardText(emoji);
   };
 
-
   const handlePaste = (event) => {
-     if (event.target.closest('footer')|| !navigator.clipboard) {
+     if (event.target.closest('footer')|| !navigator.clipboard){
       return;
     }
     navigator.clipboard.readText()
@@ -57,9 +58,11 @@ const App = () =>{
             <CursorShadow copiedText={clipboardText} />
 
       <footer>
-        <Stickers stickerEmoji={'🍏'} onEmojiSelected={handleEmojiSelected}/>
-        <Stickers stickerEmoji={'🍋'} onEmojiSelected={handleEmojiSelected}/>
-        <Stickers stickerEmoji={'🍊'} onEmojiSelected={handleEmojiSelected}/>
+        <Stickers stickerEmoji={'⚛️'} onEmojiSelected={handleEmojiSelected}/>
+        <Stickers stickerEmoji={'👩🏼‍🎤'} onEmojiSelected={handleEmojiSelected}/>
+        <Stickers stickerEmoji={'🦄'} onEmojiSelected={handleEmojiSelected}/>
+        <Stickers stickerEmoji={'🌈'} onEmojiSelected={handleEmojiSelected}/>
+
       </footer>
     </div>
   );
