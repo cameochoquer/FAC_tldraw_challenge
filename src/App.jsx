@@ -1,15 +1,21 @@
 import React, { useRef, useState, useEffect } from 'react'
 import './App.css'
 import Stickers from './stickers'
+import CursorShadow from './CursorShadow/CursorShadow'
+import './index.css'
 
 const App = () =>{
-  
+    const [clipboardText, setClipboardText] = useState('');
+
+     const handleEmojiSelected = (emoji) => {
+    setClipboardText(emoji);
+  };
+
 
   const handlePaste = (event) => {
-     if (event.target.closest('button')|| !navigator.clipboard) {
+     if (event.target.closest('footer')|| !navigator.clipboard) {
       return;
     }
-
     navigator.clipboard.readText()
     .then((text) => {
         if (text !== '') {
@@ -20,6 +26,7 @@ const App = () =>{
       newSticker.style.top = `${event.clientY}px`;
       document.body.appendChild(newSticker);
       navigator.clipboard.writeText('');
+      setClipboardText(''); // Clear the clipboard text state
         }
     });
   };
@@ -35,16 +42,17 @@ const App = () =>{
 
   return (
     <div>
+            <CursorShadow copiedText={clipboardText} />
+
       <footer>
-        <Stickers stickerEmoji={'🍏'} />
-        <Stickers stickerEmoji={'🍋'} />
-        <Stickers stickerEmoji={'🍊'} />
+        <Stickers stickerEmoji={'🍏'} onEmojiSelected={handleEmojiSelected}/>
+        <Stickers stickerEmoji={'🍋'} onEmojiSelected={handleEmojiSelected}/>
+        <Stickers stickerEmoji={'🍊'} onEmojiSelected={handleEmojiSelected}/>
       </footer>
     </div>
   );
 
  
 }
-
 
 export default App

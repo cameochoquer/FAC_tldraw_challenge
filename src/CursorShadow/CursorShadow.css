@@ -1,0 +1,8 @@
+.cursor-shadow {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  font-size: 24px;
+  opacity: 0.5;
+  transition: all 0.1s ease;
+}
