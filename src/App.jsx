@@ -24,6 +24,18 @@ const App = () =>{
       newSticker.style.position = 'absolute';
       newSticker.style.left = `${event.clientX}px`;
       newSticker.style.top = `${event.clientY}px`;
+
+        let timer;
+        newSticker.addEventListener('mousedown', (e) => {
+          timer = setTimeout(() => {
+            newSticker.remove();
+          }, 500); // Adjust the threshold (in milliseconds) as needed
+        });
+
+        newSticker.addEventListener('mouseup', (e) => {
+          clearTimeout(timer);
+        });
+
       document.body.appendChild(newSticker);
       navigator.clipboard.writeText('');
       setClipboardText(''); // Clear the clipboard text state
