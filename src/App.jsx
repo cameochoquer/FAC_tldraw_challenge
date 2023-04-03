@@ -49,7 +49,7 @@ const App = () =>{
     return () => {
         document.body.removeEventListener('click', handlePaste)
     }
-   });
+   },[]);
 
    
 
