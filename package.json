@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage":"https://cameochoquer.github.io/FAC_tldraw_challenge/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
