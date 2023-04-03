@@ -20,8 +20,6 @@ const CursorShadow = ({ copiedText }) => {
       setCursorCircle({ x: e.clientX, y: e.clientY });
       const cursorCircle = document.getElementById('cursor-circle');
       cursorCircle.style.display = 'block';
-      cursorCircle.style.left = `${e.clientX}px`;
-      cursorCircle.style.top = `${e.clientY}px`;
       setTimeout(() => {
         cursorCircle.style.display = 'none';
       }, 150);
@@ -36,13 +34,15 @@ const CursorShadow = ({ copiedText }) => {
     <>
       <div
         className="cursor-shadow"
-        style={{ left: `${cursorPosition.x + 10}px`, top: `${cursorPosition.y + 10}px` }}
+        style={{ left: `${cursorPosition.x +10}px`, top: `${cursorPosition.y  +10}px` }}
       >
         {copiedText}
       </div>
       <div
         className="cursor-circle"
         id="cursor-circle"
+        style={{ left: `${cursorPosition.x -20}px`, top: `${cursorPosition.y  -20}px`}}
+
       ></div>
     </>
   );
