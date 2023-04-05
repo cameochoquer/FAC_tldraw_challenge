@@ -23,3 +23,26 @@ You've been assigned the ticket:
 3. As a **stretch goal**, pick one of the stories you created in step two and implement it in your app.
 
 Good luck!
+
+---
+
+## Approach
+I took this challenge as opportunity to stretch my self-learning and create the replica in React.
+
+# Resources
+I watched Mike Danne's Giraffe Academy on Youtube to learn javascript and SQL and used his introduction to React to guide how I put this together. In some instances I used chatGPT to better understand how useStae and useEffect work to make the app work functionally. 
+
+# challenges
+File Structure - I'm still learning node and how to install packages and organise the files appropriately. For example, src. vs. compnonents vs. gitignore etc. I'm still working on how best to scope and modularise functions to refactor my code. 
+Clipboard - I'm not sure using the clipboard was the easiest route to put this page together but copy/paste felt intuitive for a user. However, this led to being able to copy any text on to the page. 
+For next time - I think next time I would take TDD approach to putting this together and may have been this easier to prevent bugs (like being able to paste text outside of app on to the page) next time.
+
+## How to use this repo
+clone repo and use the local host address to view the page. 
+``` terminal
+git clone 'https://github.com/cameochoquer/FAC_tldraw_challenge'
+```
+``` terminal
+npm run dev
+```
+From here, copy the local host url into your browser
