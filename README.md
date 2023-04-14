@@ -30,7 +30,7 @@ Good luck!
 I took this challenge as opportunity to stretch my self-learning and create the replica in React.
 
 ## Resources
-I watched Mike Danne's Giraffe Academy on Youtube to learn javascript and SQL and used his introduction to React to guide how I put this together. In some instances I used chatGPT to better understand how useStae and useEffect work to make the app work functionally. 
+I watched Mike Dane's Giraffe Academy on Youtube to learn javascript and SQL and used his introduction to React to guide how I put this together. In some instances I used chatGPT to better understand how useState and useEffect work to make the app work functionally. 
 
 ## challenges
 File Structure - I'm still learning node and how to install packages and organise the files appropriately. For example, src. vs. compnonents vs. gitignore etc. I'm still working on how best to scope and modularise functions to refactor my code. 
