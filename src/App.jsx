@@ -45,6 +45,7 @@ const App = () =>{
 
   useEffect(() => {
     setClipboardText('')
+        setClipboardText(stickerEmoji)
     document.body.addEventListener('click', handlePaste);
     return () => {
       document.body.removeEventListener('click', handlePaste)
